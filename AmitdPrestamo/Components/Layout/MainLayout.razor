@@ -6,9 +6,46 @@
     </div>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <div class="top-row px-4" > 
+            <AuthorizeView>
+                <Authorized>
+                    <label>@context.User.Identity?.Name </label>
+
+                    <div class="nav-item px-3">
+                        <form action="Account/Logout" method="post">
+                            <AntiforgeryToken />
+                            <input type="hidden" name="ReturnUrl"/>
+                            <button type="submit" class="btn btn-outline-danger">
+                                Cerrar sesión
+                            </button>
+                            
+                            @*
+                            <a class="btn btn-outline-danger" action="Account/Logout" aria-hidden="true">
+
+                                Cerrar sesion
+                            </a>
+                            *@
+                        </form>
+                    </div>
+                  
+
+
+                    
+                   
+                </Authorized>
+
+                <NotAuthorized>
+                    <a class="btn btn-outline-primary" href="Account/Login">
+                        Iniciar Sesión
+                    </a>
+                </NotAuthorized>
+            </AuthorizeView>
+
+          
+            
         </div>
+
+       
 
         <article class="content px-4">
             @Body
