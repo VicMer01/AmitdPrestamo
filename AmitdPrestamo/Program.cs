@@ -1,3 +1,4 @@
+using AmitdPrestamo.BLL;
 using AmitdPrestamo.Components;
 using AmitdPrestamo.Components.Account;
 using AmitdPrestamo.Data;
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddScoped<ClientesBLL>();
 
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
