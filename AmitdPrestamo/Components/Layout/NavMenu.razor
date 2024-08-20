@@ -12,15 +12,45 @@
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Inicio
-            </NavLink>
-        </div>
-
+      
+       
         
         <AuthorizeView>
             <Authorized>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Inicio
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/cliente" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Cliente
+                    </NavLink>
+                </div>
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/prestamos" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Prestamo
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/cobros" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Cobros
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/documentos" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Documentos
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/configuracion" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Configuracion
+                    </NavLink>
+                </div>
+
                 @*
                 <div class="nav-item px-3">
                     <form action="Account/Logout" method="post">
